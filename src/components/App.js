@@ -45,6 +45,7 @@ const App = () => {
       />
       <div id='step2'></div>
       <div id='step3'></div>
+      <button></button>
     </div>
   );
 };
