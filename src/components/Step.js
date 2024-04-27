@@ -6,7 +6,7 @@ const Step = ({ step, formData, handleChange, nextStep, prevStep, handleSubmit }
     switch (step) {
       case 1:
         return (
-          <div>
+          <div id='step1'>
             <input type="text" id="first_name" value={formData.first_name} onChange={handleChange} placeholder="First Name" />
             <br />
             <input type="text" id="last_name" value={formData.last_name} onChange={handleChange} placeholder="Last Name" />
@@ -14,7 +14,7 @@ const Step = ({ step, formData, handleChange, nextStep, prevStep, handleSubmit }
         );
       case 2:
         return (
-          <div>
+          <div id='step2'>
             <input type="text" id="model" value={formData.model} onChange={handleChange} placeholder="Car Model" />
             <br />
             <input type="number" id="car_price" value={formData.car_price} onChange={handleChange} placeholder="Car Price" />
