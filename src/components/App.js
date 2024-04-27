@@ -14,13 +14,23 @@ const App = () => {
   });
 
   const nextStep = () => {
-    console.log("Next step triggered. Current step:", step);
-    setStep(step + 1);
+    return new Promise((resolve) => {
+      setStep((prevStep) => {
+        const newStep = prevStep + 1;
+        resolve(newStep);
+        return newStep;
+      });
+    });
   };
 
   const prevStep = () => {
-    console.log("Previous step triggered. Current step:", step);
-    setStep(step - 1);
+    return new Promise((resolve) => {
+      setStep((prevStep) => {
+        const newStep = prevStep - 1;
+        resolve(newStep);
+        return newStep;
+      });
+    });
   };
 
   const handleChange = (e) => {
@@ -29,7 +39,7 @@ const App = () => {
   };
 
   const handleSubmit = () => {
-    // Here you can handle form submission
+    // Here you can handle form submission, 
     console.log('Form submitted:', formData);
   };
 
@@ -43,9 +53,6 @@ const App = () => {
         prevStep={prevStep}
         handleSubmit={handleSubmit}
       />
-      <div id='step2'></div>
-      <div id='step3'></div>
-      <button></button>
     </div>
   );
 };
