@@ -14,10 +14,12 @@ const App = () => {
   });
 
   const nextStep = () => {
+    console.log("Next step triggered. Current step:", step);
     setStep(step + 1);
   };
 
   const prevStep = () => {
+    console.log("Previous step triggered. Current step:", step);
     setStep(step - 1);
   };
 
@@ -27,7 +29,7 @@ const App = () => {
   };
 
   const handleSubmit = () => {
-    // Here you can handle form submission, for example, sending data to a backend server
+    // Here you can handle form submission
     console.log('Form submitted:', formData);
   };
 
