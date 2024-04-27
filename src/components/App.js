@@ -53,7 +53,12 @@ const App = () => {
         prevStep={prevStep}
         handleSubmit={handleSubmit}
       />
+      <div id='step2'></div>
+    <div id='step3'></div>
+    <button type="button"></button>
     </div>
+    
+
   );
 };
 
