@@ -33,19 +33,11 @@ const Step = ({ step, formData, handleChange, nextStep, prevStep, handleSubmit }
     }
   };
 
-  const handleNextStep = async () => {
-    await nextStep();
-  };
-
-  const handlePrevStep = async () => {
-    await prevStep();
-  };
-
   return (
     <div>
       {renderStep()}
-      {step !== 1 && <button type="button" id="prevBtn" onClick={handlePrevStep}>Previous</button>}
-      {step !== 3 ? <button type="button" id="nextBtn" onClick={handleNextStep}>Next</button> : <button type="button" id="submitBtn" onClick={handleSubmit}>Submit</button>}
+      {step !== 1 && <button type="button" id="prevBtn" onClick={() => prevStep().then()}>Previous</button>}
+      {step !== 3 ? <button type="button" id="nextBtn" onClick={() => nextStep().then()}>Next</button> : <button type="button" id="submitBtn" onClick={handleSubmit}>Submit</button>}
     </div>
   );
 };
