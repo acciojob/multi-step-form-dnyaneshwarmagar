@@ -22,7 +22,7 @@ const Step = ({ step, formData, handleChange, nextStep, prevStep, handleSubmit }
         );
       case 3:
         return (
-          <div>
+          <div id='step3'>
             <input type="text" id="card_info" value={formData.card_info} onChange={handleChange} placeholder="Card Information" />
             <br />
             <input type="text" id="expiry_date" value={formData.expiry_date} onChange={handleChange} placeholder="Expiry Date" />
