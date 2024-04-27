@@ -36,8 +36,8 @@ const Step = ({ step, formData, handleChange, nextStep, prevStep, handleSubmit }
   return (
     <div>
       {renderStep()}
-      {step !== 1 && <button id="prevBtn" onClick={prevStep}>Previous</button>}
-      {step !== 3 ? <button id="nextBtn" onClick={nextStep}>Next</button> : <button id="submitBtn" onClick={handleSubmit}>Submit</button>}
+      {step !== 1 && <button type="button" id="prevBtn" onClick={prevStep}>Previous</button>}
+      {step !== 3 ? <button type="button" id="nextBtn" onClick={nextStep}>Next</button> : <button type="button" id="submitBtn" onClick={handleSubmit}>Submit</button>}
     </div>
   );
 };
