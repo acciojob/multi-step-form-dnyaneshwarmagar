@@ -1,7 +1,6 @@
 // App.js
 import React, { useState } from 'react';
 import Step from './Step';
-import MultiStepForm from './MultiStepForm';
 
 const App = () => {
   const [step, setStep] = useState(1);
@@ -46,7 +45,17 @@ const App = () => {
 
   return (
     <div>
-     <MultiStepForm/>
+      <Step
+        step={step}
+        formData={formData}
+        handleChange={handleChange}
+        nextStep={nextStep}
+        prevStep={prevStep}
+        handleSubmit={handleSubmit}
+      />
+      <div id='step2'></div>
+    <div id='step3'></div>
+    <button type="button"></button>
     </div>
     
 
