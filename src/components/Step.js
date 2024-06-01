@@ -6,30 +6,30 @@ const Step = ({ stepNumber, currentStep, onNext, onPrev, onSubmit }) => {
   const isActive = currentStep === stepNumber;
 
   return (
-    <div className={`step ${isActive ? 'active' : ''}`} id={`step${currentStep}`}>
+    <div className={`step ${isActive ? 'active' : ''}`} >
       {stepNumber === 1 && (
-        <>
+        <div id='step1'>
           <label htmlFor="first_name">First Name:</label>
           <input type="text" id="first_name" name="first_name" required />
 
           <label htmlFor="last_name">Last Name:</label>
           <input type="text" id="last_name" name="last_name" required />
-        </>
+        </div>
       )}
 
 
       {stepNumber === 2 && (
-        <>
+        <div id='step2'>
           <label htmlFor="model">Car Model:</label>
           <input type="text" id="model" name="model" required />
 
           <label htmlFor="car_price">Car Price:</label>
           <input type="number" id="car_price" name="car_price" required />
-        </>
+        </div>
       )}
 
       {stepNumber === 3 && (
-        <>
+        <div id='step3'>
           <label htmlFor="card_info">Card Number:</label>
           <input type="text" id="card_info" name="card_info" required />
 
@@ -42,7 +42,7 @@ const Step = ({ stepNumber, currentStep, onNext, onPrev, onSubmit }) => {
             placeholder="MM/YY"
             required
           />
-        </>
+        </div>
       )}
 
       <div>
