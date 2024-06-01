@@ -6,7 +6,7 @@ const Step = ({ stepNumber, currentStep, onNext, onPrev, onSubmit }) => {
   const isActive = currentStep === stepNumber;
 
   return (
-    <div className={`step ${isActive ? 'active' : ''}`} id={`step${stepNumber}`}>
+    <div className={`step ${isActive ? 'active' : ''}`} id={`step${currentStep}`}>
       {stepNumber === 1 && (
         <>
           <label htmlFor="first_name">First Name:</label>

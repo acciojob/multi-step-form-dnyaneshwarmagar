@@ -1,14 +1,13 @@
 
 
 import React, { useState } from 'react';
-import Step from './Step'; // Make sure to adjust the import path
+import Step from './Step'; 
 import "./../styles/App.css";
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
 
   const nextStep = () => {
-    // rftgb35htg34
     if (currentStep < 3) {
       setCurrentStep(currentStep + 1);
     }
@@ -23,11 +22,11 @@ const MultiStepForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     alert('Form submitted successfully!');
-    // You can add AJAX or other logic for form submission here
+  
   };
 
   return (
-    // fvt4gt4wg4dedcdcw
+
     <form id="multiStepForm" onSubmit={handleSubmit}>
       <Step stepNumber={currentStep} currentStep={currentStep} onNext={nextStep} onPrev={prevStep} />
 
