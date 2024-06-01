@@ -17,10 +17,7 @@ const Step = ({ stepNumber, currentStep, onNext, onPrev, onSubmit }) => {
         </>
       )}
 
-{/* 
-efji3hrifhr3i
 
-frv34v2*/}
       {stepNumber === 2 && (
         <>
           <label htmlFor="model">Car Model:</label>
@@ -29,7 +26,6 @@ frv34v2*/}
           <label htmlFor="car_price">Car Price:</label>
           <input type="number" id="car_price" name="car_price" required />
         </>
-        // dvfrevfcefvrwb
       )}
 
       {stepNumber === 3 && (
